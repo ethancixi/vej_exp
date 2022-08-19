@@ -1,0 +1,16 @@
+{
+  "name": "vej_exp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
+    "watch": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
