@@ -10,7 +10,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'Tangerine': ['Tangerine', 'serif']
+        'Tangerine': ['Tangerine', 'serif'],
+        'Cormorant' : ['Cormorant', 'serif']
       },
     },
   },
