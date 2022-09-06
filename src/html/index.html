@@ -11,7 +11,8 @@
     <link rel="icon" href="../../img/logo/logo_nosfondo.png">
     <title>Vej e Giovo 'd Buriasch</title>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="../../dist/app.js"></script> 
 </head>
 
 <!-- ctrl + k + c -->
@@ -32,7 +33,9 @@
                 <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 hover:font-semibold duration-200">CONTATTI</a>
             </div>
             <!-- hamburger -->
-            <a href=""></a>
+            <button id="menu-btn" class="block md:hidden focus:outline-none">
+                
+            </button>
         </div>
     </nav>
     <!-- hero section -->
@@ -55,29 +58,39 @@
         </div>
     </section>
     <!-- add section -->
+    
     <!-- footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container flex flex-col-reverse justify-between py-6 space-y-8 mx-auto md:flex-row md:space-y-0">
             <!-- logo and social -->
-            <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col-reverse md:space-y-0 md:items-start">
+            <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-row md:space-y-0 md:items-start">
                 <!-- logo -->
                 <div>
-                    <img src="../../img/logo/logo_svg_noscritte.svg" alt="" class="w-16 h-16 md:w-48 md:h-48">
+                    <img src="../../img/logo/logo_svg_noscritte.svg" alt="" class="w-24 h-24 mt-4 md:w-48 md:h-48">
                 </div>
                 <!-- social -->
-                <div class="flex justify-center space-x-4">
-                    <a href="" class="h-8 w-8">
+                <div class="flex flex-row space-x-8 justify-center md:flex-col md:space-x-2">
+                    <a href="" class="h-12 w-12 m-2 md:h-8 md:w-8 md:m-2">
                         <img src="../../img/social/facebook_blue.svg" alt="facebook logo">
                     </a>
-                    <a href="" class="h-8 w-8">
+                    <a href="" class="h-12 w-12 m-2 md:h-8 md:w-8 md:m-2">
                         <img src="../../img/social/Instagram_color.svg" alt="instagram logo">
                     </a>
-                    <a href="" class="h-8 w-8">
+                    <a href="" class="h-12 w-12 m-2 md:h-8 md:w-8 md:m-2">
                         <img src="../../img/social/youtube_red.svg" alt="youtube logo">
                     </a>
-                    <a href="" class="h-8 w-8">
+                    <a href="" class="h-12 w-12 m-2 md:h-8 md:w-8 md:m-2">
                         <img src="../../img/social/WhatsApp_green.svg" alt="whatsapp logo">
                     </a>
+                </div>
+            </div>
+            <!-- list -->
+            <div class="flex justify-center text-center">
+                <div class="flex flex-col space-y-8">
+                    <a href="" class="hover:text-red">Contattaci</a>
+                    <a href="" class="hover:text-red">Appuntamenti</a>
+                    <a href="" class="hover:text-red">///////////</a>
+                    <a href="" class="hover:text-red">///////////</a>
                 </div>
             </div>
         </div>
