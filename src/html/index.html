@@ -33,8 +33,9 @@
                 <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 hover:font-semibold duration-200">CONTATTI</a>
             </div>
             <!-- hamburger -->
-            <button id="menu-btn" class="block md:hidden focus:outline-none">
-                
+            <button id="menu-btn" class="block md:hidden" x-data="{open: false}">
+                <img src="../../img/icons/bars.svg" alt="menu" class="h-8 w-8" @click="open = ! open" x-show="! open">
+                <img src="../../img/icons/bars-staggered.svg" alt="menu open" class="h-8 w-8" @click="open = false" x-show="open">
             </button>
         </div>
     </nav>
@@ -53,7 +54,7 @@
             <!-- right -->
             <div class="md:w-1/2">
                 <!--  TODO  image slider con cornice -->
-                <img src="../../img/foto/Immagine9.jpg" alt="logo">
+                <img src="../../img/foto/Immagine9.jpg" alt="logo" class="rounded-xl">
             </div>
         </div>
     </section>
@@ -86,11 +87,11 @@
             </div>
             <!-- list -->
             <div class="flex justify-center text-center">
-                <div class="flex flex-col space-y-8">
-                    <a href="" class="hover:text-red">Contattaci</a>
-                    <a href="" class="hover:text-red">Appuntamenti</a>
-                    <a href="" class="hover:text-red">///////////</a>
-                    <a href="" class="hover:text-red">///////////</a>
+                <div class="flex flex-col space-y-8 mx-2">
+                    <a href="" class="hover:text-sky-200">Contattaci</a>
+                    <a href="" class="hover:text-sky-200">Appuntamenti</a>
+                    <a href="" class="hover:text-sky-200">///////////</a>
+                    <a href="" class="hover:text-sky-200">///////////</a>
                 </div>
             </div>
         </div>
