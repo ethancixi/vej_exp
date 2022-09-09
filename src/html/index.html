@@ -26,17 +26,29 @@
                 <img src="../../img/logo/logo_svg.svg" alt="Logo Vej e Giovo" class="w-16 h-16 md:w-24 md:h-24">
             </div>
             <!-- list -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 hover:font-semibold duration-200">STORIA</a>
-                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 hover:font-semibold duration-200">COMMEDIE</a>
-                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 hover:font-semibold duration-200">APPUNTAMENTI</a>
-                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 hover:font-semibold duration-200">CONTATTI</a>
+            <div class="hidden md:flex md:space-x-8">
+                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200">STORIA</a>
+                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200">COMMEDIE</a>
+                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200">APPUNTAMENTI</a>
+                <a href="#" class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200">CONTATTI</a>
             </div>
-            <!-- hamburger -->
-            <button id="menu-btn" class="block md:hidden" x-data="{open: false}">
-                <img src="../../img/icons/bars.svg" alt="menu" class="h-8 w-8" @click="open = ! open" x-show="! open">
-                <img src="../../img/icons/bars-staggered.svg" alt="menu open" class="h-8 w-8" @click="open = false" x-show="open">
-            </button>
+            <!-- mobile menu -->
+            <div x-data="{open: false}">
+                <!-- mobile list -->
+                <div class="md:hidden" x-show="open">
+                    <div id="menu-items" class="absolute flex flex-col items-center self-end py-8 mt-16 space-y-6 font-semibold left-0 right-0 sm:w-auto sm:self-center bg-white">
+                        <a href="" class="border-solid border-opacity-0 border-b-2 border-gray-600 transition ease-in-out focus:border-opacity-100 duration-200">STORIA</a>
+                        <a href="" class="border-solid border-opacity-0 border-b-2 border-gray-600 transition ease-in-out focus:border-opacity-100 duration-200">COMMEDIE</a>
+                        <a href="" class="border-solid border-opacity-0 border-b-2 border-gray-600 transition ease-in-out focus:border-opacity-100 duration-200">APPUNTAMENTI</a>
+                        <a href="" class="border-solid border-opacity-0 border-b-2 border-gray-600 transition ease-in-out focus:border-opacity-100 duration-200" >CONTATTI</a>
+                    </div>
+                </div>
+                <!-- hamburger -->
+                <button id="menu-btn" class="block md:hidden">
+                    <img src="../../img/icons/bars.svg" alt="menu" class="h-8 w-8" @click="open = ! open" x-show="! open">
+                    <img src="../../img/icons/bars-staggered.svg" alt="menu open" class="h-8 w-8" @click="open = false" x-show="open">
+                </button>
+            </div>  
         </div>
     </nav>
     <!-- hero section -->
