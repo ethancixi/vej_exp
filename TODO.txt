@@ -2,11 +2,25 @@ TAILWIND E ALPINEJS: INSTALLED
 
 - HAMBURGER MENU - V
 - PENSARE AD UNA SECTION
-- IMAGE SLIDER IN INDEX
-- ALTRE PAGINE:
-    - STORIA
-    - COMMEDIE
-    - APPUNTAMENTI
-    - CONTATTI
+- IMAGE SLIDER IN INDEX --
+- BACKGROUND SVG 
 - RIFARE BENE I LOGHI SU PHOTOSHOP (TOGLIERE BORDINO BIANCO)
 - METTERE LINK GIUSTI IN GIRO
+
+------------------------------------------------------------
+STORIA:
+Linea del tempo interattiva 
+
+------------------------------------------------------------
+COMMEDIE:
+Listone di commedie 
+
+------------------------------------------------------------
+APPUNTAMENTI:
+
+
+------------------------------------------------------------
+CONTATTI:
+Sezione contatti con form e contatti vari
+
+------------------------------------------------------------
