@@ -115,24 +115,28 @@
     </nav>
     <section class="font-[Cormorant]">
       <div
-        class="flex container flex-col items-center px-4 mt-4 mx-auto space-y-0 font-['Cormorant'] md:mt-0 md:h-screen"
+        class="flex container flex-col items-center px-4 mt-4 mx-auto space-y-0 font-['Cormorant'] md:mt-0"
       >
         <!-- title -->
         <div class="flex flex-col">
           <h1
-            class="text-6xl max-w-md font-bold text-center md:text-8xl md:text-left font-['Tangerine']"
+            class="text-6xl max-w-md font-bold text-center mb-4 md:text-8xl md:text-left font-['Tangerine']"
           >
             Spettacoli 
           </h1>
         </div>
-        <div x-data="{commedie: ['Mare Granda', 'Ciapa lì', 'La Trapula Politica', 'La verità a Ogni Cust']}">
+        <div x-data="{commedie: ['Mare Granda', 'Ciapa lì']}">
           <template x-for="commedia in commedie">
-            <div> 
-              <h2 x-text="commedia" class="text-3xl font-[Tangerine]">
-              </h2>
-              <hr>
+           <div class="card lg:card-side shadow-lg my-8 border">
+              <figure><img src="../../img/foto/Immagine9.jpg" alt="banana"/></figure>
+              <div class="card-body">
+                <h2 class="card-title text-4xl font-[Tangerine]" x-text="commedia"></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi beatae sed porro, tempore iste ad odit voluptatem vitae similique nam debitis iure maiores dolorem aperiam vel labore iusto soluta?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn bg-gray-700">Listen</button>
+                </div>
+              </div>
             </div>
-
           </template>
         </div>
     </section>
