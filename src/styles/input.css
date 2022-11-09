@@ -16,3 +16,14 @@ body {
 .link-gradient:hover {
   background-size: 100% 3px;
 }
+
+.border-gradient {
+  border-width: 5px;
+  border-image: linear-gradient(90deg, #f3ef11, #ab0c39) 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .border-gradient {
+    display: none;
+  }
+}

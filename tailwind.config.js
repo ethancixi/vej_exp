@@ -13,6 +13,10 @@ module.exports = {
         Tangerine: ["Tangerine", "serif"],
         Cormorant: ["Cormorant", "serif"],
       },
+      colors: {
+        maskRed: "#ab0c39",
+        maskYellow: "#f3ef11",
+      },
     },
   },
   plugins: [require("daisyui")],

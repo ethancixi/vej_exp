@@ -29,7 +29,7 @@
     <nav class="relative container mx-auto p-6">
       <div class="flex items-center justify-between">
         <!-- logo -->
-        <div class="pt-2">
+        <div class="pt-2 z-20">
           <a href="index.html">
             <img
               src="../../img/logo/logo_svg.svg"
@@ -67,7 +67,7 @@
           <div class="md:hidden" x-show="open">
             <div
               id="menu-items"
-              class="absolute flex flex-col items-center self-end py-8 mt-16 space-y-6 font-semibold left-0 right-0 sm:w-auto sm:self-center bg-orange-50"
+              class="absolute top-0 left-0 flex w-full h-screen flex-col items-center py-8 space-y-6 font-semibold bg-orange-50 z-10"
             >
               <a
                 href="storia.html"
@@ -92,7 +92,7 @@
             </div>
           </div>
           <!-- hamburger -->
-          <button id="menu-btn" class="block md:hidden">
+          <button id="menu-btn" class="block md:hidden z-20">
             <img
               src="../../img/icons/bars.svg"
               alt="menu"
@@ -104,7 +104,7 @@
               src="../../img/icons/bars-staggered.svg"
               alt="menu open"
               class="h-8 w-8"
-              @click="open = ! open"
+              @click="open = ! false"
               x-show="open"
             />
           </button>
@@ -131,8 +131,12 @@
           </p>
         </div>
         <!-- right -->
+
         <div class="md:w-1/2 flex relative">
-          <div class="carousel w-full rounded-lg">
+          <div
+            class="w-full h-full border-gradient p-4 absolute -translate-x-4 -translate-y-4 -z-10"
+          ></div>
+          <div class="carousel w-full">
             <div id="item1" class="carousel-item w-full">
               <img src="../../img/foto/banana.jpg" class="w-full" />
             </div>
@@ -155,19 +159,25 @@
           <div class="w-36 rounded-full">
             <img src="../../img/foto/snitch.jpg" />
           </div>
-          <span class="text-bold text-xl">madre</span>
+          <span class="text-bold text-xl">
+            <a href="#" class="link-gradient">madre</a>
+          </span>
         </div>
         <div class="avatar flex flex-col items-center">
           <div class="w-36 rounded-full">
             <img src="../../img/foto/banana.jpg" />
           </div>
-          <span class="text-bold text-xl">banana</span>
+          <span class="text-bold text-xl">
+            <a href="#" class="link-gradient">banana</a>
+          </span>
         </div>
         <div class="avatar flex flex-col items-center">
           <div class="w-36 rounded-full">
             <img src="../../img/foto/buriasco.jpg" />
           </div>
-          <span class="text-bold text-xl">buriasco</span>
+          <span class="text-bold text-xl">
+            <a href="#" class="link-gradient">buriasco</a>
+          </span>
         </div>
       </div>
     </section>
