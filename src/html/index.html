@@ -25,201 +25,237 @@
   </head>
 
   <body>
-    <!-- nav -->
-    <nav class="relative container mx-auto p-6">
-      <div class="flex items-center justify-between">
-        <!-- logo -->
-        <div class="pt-2">
-          <a href="index.html">
-            <img
-              src="../../img/logo/logo_svg.svg"
-              alt="Logo Vej e Giovo"
-              class="w-16 h-16 md:w-24 md:h-24"
-            />
-          </a>
-        </div>
-        <!-- list -->
-        <div class="hidden md:flex md:space-x-8">
-          <a
-            href="storia.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >STORIA</a
-          >
-          <a
-            href="spettacoli.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >SPETTACOLI</a
-          >
-          <a
-            href="appuntamenti.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >APPUNTAMENTI</a
-          >
-          <a
-            href="contatti.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >CONTATTI</a
-          >
-        </div>
-        <!-- mobile menu -->
-        <div x-data="{open: false}">
-          <!-- mobile list -->
-          <div class="md:hidden" x-show="open">
-            <div
-              id="menu-items"
-              class="absolute flex flex-col items-center self-end py-8 mt-16 space-y-6 font-semibold left-0 right-0 sm:w-auto sm:self-center bg-orange-50"
+    <div class="drawer">
+      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content flex flex-col">
+        <!-- nav -->
+        <div class="navbar my-4">
+          <div class="flex-none lg:hidden">
+            <label for="my-drawer-3" class="btn btn-square btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-6 h-6 stroke-current"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
+          </div>
+          <div class="navbar-start">
+            <a href="index.html">
+              <img
+                src="../../img/logo/logo_svg.svg"
+                alt="Logo Vej e Giovo"
+                class="w-16 h-16 md:w-24 md:h-24"
+              />
+            </a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-4">
+              <li>
+                <a
+                  href="storia.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >STORIA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="spettacoli.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >SPETTACOLI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="appuntamenti.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >APPUNTAMENTI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contatti.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >CONTATTI</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn btn-outline border-2 border-black"
+              >Vieni a Vederci!</a
             >
-              <a
-                href="storia.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >STORIA</a
-              >
-              <a
-                href="spettacoli.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >SPETTACOLI</a
-              >
-              <a
-                href="appuntamenti.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >APPUNTAMENTI</a
-              >
-              <a
-                href="contatti.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >CONTATTI</a
-              >
-            </div>
           </div>
-          <!-- hamburger -->
-          <button id="menu-btn" class="block md:hidden">
-            <img
-              src="../../img/icons/bars.svg"
-              alt="menu"
-              class="h-8 w-8"
-              @click="open = ! open"
-              x-show="! open"
-            />
-            <img
-              src="../../img/icons/bars-staggered.svg"
-              alt="menu open"
-              class="h-8 w-8"
-              @click="open = ! open"
-              x-show="open"
-            />
-          </button>
         </div>
-      </div>
-    </nav>
-    <!-- hero section -->
-    <section id="hero" class="font-['Cormorant']">
-      <div
-        class="flex container flex-col-reverse items-center mx-auto px-4 mt-8 space-y-0 md:flex-row"
-      >
-        <!-- left -->
-        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
-          <h1
-            class="text-6xl max-w-md font-bold text-center mt-4 md:text-7xl md:text-left font-['Tangerine'] link-gradient"
+
+        <!-- hero section -->
+        <section id="hero" class="font-['Cormorant']">
+          <div
+            class="flex container flex-col-reverse items-center mx-auto px-4 mt-8 space-y-0 md:flex-row"
           >
-            Vej e Giovo 'd Buriasch
-          </h1>
-          <p class="text-2xl text-center max-w-sm md:text-xl md:text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
-            provident amet? Ex dolorum at, dolores tenetur ab consequuntur sunt
-            incidunt nostrum dicta cum dolor facilis vero ipsa. Assumenda,
-            officiis adipisci.
-          </p>
-        </div>
-        <!-- right -->
-        <div class="md:w-1/2 flex relative">
-          <div class="carousel w-full rounded-lg">
-            <div id="item1" class="carousel-item w-full">
-              <img src="../../img/foto/banana.jpg" class="w-full" />
+            <!-- left -->
+            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+              <h1
+                class="text-6xl max-w-md font-bold text-center mt-4 md:text-7xl md:text-left font-['Tangerine'] link-gradient"
+              >
+                Vej e Giovo 'd Buriasch
+              </h1>
+              <span
+                class="bg-gradient-to-r from-maskYellow to-maskRed h-1 md:hidden"
+              >
+              </span>
+              <p class="text-2xl text-center max-w-sm md:text-xl md:text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                provident amet? Ex dolorum at, dolores tenetur ab consequuntur
+                sunt incidunt nostrum dicta cum dolor facilis vero ipsa.
+                Assumenda, officiis adipisci.
+              </p>
             </div>
-            <div id="item2" class="carousel-item w-full">
-              <img src="../../img/foto/buriasco.jpg" class="w-full" />
+            <!-- right -->
+
+            <div class="md:w-1/2 flex relative">
+              <div
+                class="w-full h-full border-gradient p-4 absolute -translate-x-4 -translate-y-4 -z-10"
+              ></div>
+              <div class="carousel w-full">
+                <div id="item1" class="carousel-item w-full">
+                  <img src="../../img/foto/banana.jpg" class="w-full" />
+                </div>
+                <div id="item2" class="carousel-item w-full">
+                  <img src="../../img/foto/buriasco.jpg" class="w-full" />
+                </div>
+                <div id="item3" class="carousel-item w-full">
+                  <img src="../../img/foto/Immagine9.jpg" class="w-full" />
+                </div>
+              </div>
             </div>
-            <div id="item3" class="carousel-item w-full">
-              <img src="../../img/foto/Immagine9.jpg" class="w-full" />
+          </div>
+        </section>
+
+        <section class="font-['Cormorant']">
+          <div
+            class="flex flex-col space-y-4 md:flex-row justify-around w-full items-center"
+          >
+            <div class="avatar flex flex-col items-center">
+              <div class="w-36 rounded-full">
+                <img src="../../img/foto/snitch.jpg" />
+              </div>
+              <span class="text-bold text-xl">
+                <a href="#">madre</a>
+              </span>
+            </div>
+            <div class="avatar flex flex-col items-center">
+              <div class="w-36 rounded-full">
+                <img src="../../img/foto/banana.jpg" />
+              </div>
+              <span class="text-bold text-xl">
+                <a href="#">banana</a>
+              </span>
+            </div>
+            <div class="avatar flex flex-col items-center">
+              <div class="w-36 rounded-full">
+                <img src="../../img/foto/buriasco.jpg" />
+              </div>
+              <span class="text-bold text-xl">
+                <a href="#">buriasco</a>
+              </span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="font-['Cormorant']">
-      <div
-        class="flex flex-col space-y-4 md:flex-row justify-around w-full items-center"
-      >
-        <div class="avatar flex flex-col items-center">
-          <div class="w-36 rounded-full">
-            <img src="../../img/foto/snitch.jpg" />
-          </div>
-          <span class="text-bold text-xl">madre</span>
-        </div>
-        <div class="avatar flex flex-col items-center">
-          <div class="w-36 rounded-full">
-            <img src="../../img/foto/banana.jpg" />
-          </div>
-          <span class="text-bold text-xl">banana</span>
-        </div>
-        <div class="avatar flex flex-col items-center">
-          <div class="w-36 rounded-full">
-            <img src="../../img/foto/buriasco.jpg" />
-          </div>
-          <span class="text-bold text-xl">buriasco</span>
-        </div>
-      </div>
-    </section>
+        <section class="font-['Cormorant']"></section>
 
-    <section class="font-['Cormorant']"></section>
-
-    <!-- footer -->
-    <footer
-      class="footer p-10 bg-gray-700 text-neutral-content font-['Cormorant']"
-    >
-      <div>
-        <a>
-          <img src="../../img/logo/logo_svg.svg" alt="logo" class="w-36 h-36" />
-        </a>
-        <p class="text-lg opacity-50">
-          Vej e Giovo 'd Buriasch<br />
-          "Il Teatro è l'arte più viva perchè è la poesia della Vita"
-        </p>
+        <!-- footer -->
+        <footer
+          class="footer p-10 bg-gray-700 text-neutral-content font-['Cormorant']"
+        >
+          <div>
+            <a>
+              <img
+                src="../../img/logo/logo_svg.svg"
+                alt="logo"
+                class="w-36 h-36"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </a>
+            <p class="text-lg opacity-50">
+              Vej e Giovo 'd Buriasch<br />
+              "Il Teatro è l'arte più viva perchè è la poesia della Vita"
+            </p>
+          </div>
+          <div>
+            <span class="footer-title text-xl">Social</span>
+            <div class="grid grid-flow-col gap-4">
+              <a>
+                <img
+                  src="../../img/social/facebook_blue.svg"
+                  alt="facebook logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+              <a>
+                <img
+                  src="../../img/social/Instagram_color.svg"
+                  alt="instagram logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+              <a>
+                <img
+                  src="../../img/social/youtube_red.svg"
+                  alt="youtube logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+              <a>
+                <img
+                  src="../../img/social/WhatsApp_green.svg"
+                  alt="whatsapp logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
-      <div>
-        <span class="footer-title text-xl">Social</span>
-        <div class="grid grid-flow-col gap-4">
-          <a>
-            <img
-              src="../../img/social/facebook_blue.svg"
-              alt="facebook logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-          <a>
-            <img
-              src="../../img/social/Instagram_color.svg"
-              alt="instagram logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-          <a>
-            <img
-              src="../../img/social/youtube_red.svg"
-              alt="youtube logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-          <a>
-            <img
-              src="../../img/social/WhatsApp_green.svg"
-              alt="whatsapp logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-        </div>
+      <div class="drawer-side">
+        <label for="my-drawer-3" class="drawer-overlay"></label>
+        <ul class="menu p-4 w-80 bg-orange-50">
+          <li>
+            <a href="storia.html" class="focus:bg-gray-600 focus:text-white"
+              >STORIA</a
+            >
+          </li>
+          <li>
+            <a href="spettacoli.html" class="focus:bg-gray-600 focus:text-white"
+              >SPETTACOLI</a
+            >
+          </li>
+          <li>
+            <a
+              href="appuntamenti.html"
+              class="focus:bg-gray-600 focus:text-white"
+              >APPUNTAMENTI</a
+            >
+          </li>
+          <li>
+            <a href="contatti.html" class="focus:bg-gray-600 focus:text-white"
+              >CONTATTI</a
+            >
+          </li>
+        </ul>
       </div>
-    </footer>
+    </div>
   </body>
 </html>

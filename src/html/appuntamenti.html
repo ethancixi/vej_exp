@@ -25,205 +25,228 @@
   </head>
   <body>
     <!-- nav -->
-    <nav class="relative container mx-auto p-6">
-      <div class="flex items-center justify-between">
-        <!-- logo -->
-        <div class="pt-2">
-          <a href="index.html">
-            <img
-              src="../../img/logo/logo_svg.svg"
-              alt="Logo Vej e Giovo"
-              class="w-16 h-16 md:w-24 md:h-24"
-            />
-          </a>
-        </div>
-        <!-- list -->
-        <div class="hidden md:flex md:space-x-8">
-          <a
-            href="storia.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >STORIA</a
-          >
-          <a
-            href="spettacoli.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >SPETTACOLI</a
-          >
-          <a
-            href="appuntamenti.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >APPUNTAMENTI</a
-          >
-          <a
-            href="contatti.html"
-            class="border-solid border-opacity-0 border-b-2 border-gray-600 p-2 transition ease-in-out hover:border-opacity-100 duration-200"
-            >CONTATTI</a
-          >
-        </div>
-        <!-- mobile menu -->
-        <div x-data="{open: false}">
-          <!-- mobile list -->
-          <div class="md:hidden" x-show="open">
-            <div
-              id="menu-items"
-              class="absolute flex flex-col items-center self-end py-8 mt-16 space-y-6 font-semibold left-0 right-0 sm:w-auto sm:self-center bg-orange-50"
-            >
-              <a
-                href="storia.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >STORIA</a
+    <div class="drawer">
+      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content flex flex-col">
+        <!-- nav -->
+        <div class="navbar my-4">
+          <div class="flex-none lg:hidden">
+            <label for="my-drawer-3" class="btn btn-square btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-6 h-6 stroke-current"
               >
-              <a
-                href="spettacoli.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >SPETTACOLI</a
-              >
-              <a
-                href="appuntamenti.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >APPUNTAMENTI</a
-              >
-              <a
-                href="contatti.html"
-                class="border-solid border-opacity-0 border-b-2 border-gray-600 p-1 transition ease-in-out focus:border-opacity-100 duration-200"
-                >CONTATTI</a
-              >
-            </div>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
           </div>
-          <!-- hamburger -->
-          <button id="menu-btn" class="block md:hidden">
-            <img
-              src="../../img/icons/bars.svg"
-              alt="menu"
-              class="h-8 w-8"
-              @click="open = ! open"
-              x-show="! open"
-            />
-            <img
-              src="../../img/icons/bars-staggered.svg"
-              alt="menu open"
-              class="h-8 w-8"
-              @click="open = false"
-              x-show="open"
-            />
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <section>
-      <div
-        class="flex container flex-col items-center px-4 mt-4 mx-auto space-y-0 font-['Cormorant'] md:mt-0"
-      >
-        <!-- title -->
-        <div class="flex flex-col">
-          <h1
-            class="text-6xl max-w-md font-bold text-center md:text-8xl md:text-left font-['Tangerine']"
-          >
-            Appuntamenti
-          </h1>
-        </div>
-        <!-- commedia -->
-        <div class="flex flex-col">
-          <p class="text-xl mt-12 text-center">
-            La Compagnia teatrale <b>VEJ E GIOVO</b> di Buriasco presenta la
-            Commedia in 3 atti e 2 quadri di <b>Elisabetta Schiavo</b>
-          </p>
-          <h2 class="text-4xl font-bold max-w-d text-center mt-8">
-            Mare Granda
-          </h2>
-          <div class="mx-auto flex flex-col-reverse my-8 md:flex-row">
-            <div class="md:w-2/3 p-2">
-              <p class="text-justify">
-                La commedia è ambientata a inizio anni 50 del '900, parte in una
-                cascina del nostro Piemonte e parte a Torino. Tratta le vicende
-                di una donna settantenne, per l' appunto "Mare Granda", cioè la
-                nonna, ferma e solida come una vecchia quercia, che fa andare
-                felicemente avanti tutto e tutti in quel grande cascinale, con
-                terre, vigne, e tanti dipendenti come era consuetudine a quei
-                tempi. Un evento inaspettato la porta a recarsi a Torino dove si
-                trova la figlia sposata, la quale "modernizzata" intende far
-                intraprendere la strada del cinema e del teatro alla nipote, con
-                tutte le conseguenze che la vicenda comporterà. La saggia donna
-                interverrà tempestivamente e sistemerà figlia, genero e nipote.
-              </p>
-            </div>
-            <div class="md:w-1/3 p-2">
+          <div class="navbar-start">
+            <a href="index.html">
               <img
-                src="../../img/foto/banana.jpg"
-                alt="banana"
-                class="rounded-lg"
+                src="../../img/logo/logo_svg.svg"
+                alt="Logo Vej e Giovo"
+                class="w-16 h-16 md:w-24 md:h-24"
               />
-            </div>
+            </a>
           </div>
-          <!-- appuntamenti e map-->
-          <hr />
-          <div class="mx-auto flex flex-col justify-center space-y-4 mb-8">
-            <h3 class="flex text-3xl font-bold max-w-d text-center mt-8">
-              Scarnafigi, 1 Ottobre 2022
-            </h3>
-            <div class="flex justify-center">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11347.624580788326!2d7.5675939!3d44.6806958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa181c99118f7b325!2sCinema%20Teatro!5e0!3m2!1sen!2sit!4v1663408762974!5m2!1sen!2sit"
-                width="256"
-                height="256"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-4">
+              <li>
+                <a
+                  href="storia.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >STORIA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="spettacoli.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >SPETTACOLI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="appuntamenti.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >APPUNTAMENTI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contatti.html"
+                  class="border-solid border-opacity-0 border-b-2 mx-4 border-gray-600 bg-transparent p-2 transition ease-in-out hover:border-opacity-100 duration-200"
+                  >CONTATTI</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn btn-outline border-2 border-black"
+              >Vieni a Vederci!</a
+            >
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- footer -->
-    <footer
-      class="footer p-10 bg-gray-700 text-neutral-content font-['Cormorant']"
-    >
-      <div>
-        <a>
-          <img src="../../img/logo/logo_svg.svg" alt="logo" class="w-36 h-36" />
-        </a>
-        <p class="text-lg opacity-50">
-          Vej e Giovo 'd Buriasch<br />"Il Teatro è l'arte più viva perchè è la
-          poesia della Vita"
-        </p>
+        <section>
+          <div
+            class="flex container flex-col items-center px-4 mt-4 mx-auto space-y-0 font-['Cormorant'] md:mt-0"
+          >
+            <!-- title -->
+            <div class="flex flex-col">
+              <h1
+                class="text-6xl max-w-md font-bold text-center md:text-8xl md:text-left font-['Tangerine']"
+              >
+                Appuntamenti
+              </h1>
+            </div>
+            <!-- commedia -->
+            <div class="flex flex-col">
+              <p class="text-xl mt-12 text-center">
+                La Compagnia teatrale <b>VEJ E GIOVO</b> di Buriasco presenta la
+                Commedia in 3 atti e 2 quadri di <b>Elisabetta Schiavo</b>
+              </p>
+              <h2 class="text-4xl font-bold max-w-d text-center mt-8">
+                Mare Granda
+              </h2>
+              <div class="mx-auto flex flex-col-reverse my-8 md:flex-row">
+                <div class="md:w-2/3 p-2">
+                  <p class="text-justify">
+                    La commedia è ambientata a inizio anni 50 del '900, parte in
+                    una cascina del nostro Piemonte e parte a Torino. Tratta le
+                    vicende di una donna settantenne, per l' appunto "Mare
+                    Granda", cioè la nonna, ferma e solida come una vecchia
+                    quercia, che fa andare felicemente avanti tutto e tutti in
+                    quel grande cascinale, con terre, vigne, e tanti dipendenti
+                    come era consuetudine a quei tempi. Un evento inaspettato la
+                    porta a recarsi a Torino dove si trova la figlia sposata, la
+                    quale "modernizzata" intende far intraprendere la strada del
+                    cinema e del teatro alla nipote, con tutte le conseguenze
+                    che la vicenda comporterà. La saggia donna interverrà
+                    tempestivamente e sistemerà figlia, genero e nipote.
+                  </p>
+                </div>
+                <div class="md:w-1/3 p-2">
+                  <img
+                    src="../../img/foto/banana.jpg"
+                    alt="banana"
+                    class="rounded-lg"
+                  />
+                </div>
+              </div>
+              <!-- appuntamenti e map-->
+              <hr />
+              <div class="mx-auto flex flex-col justify-center space-y-4 mb-8">
+                <h3 class="flex text-3xl font-bold max-w-d mt-8 justify-center">
+                  Scarnafigi, 1 Ottobre 2022
+                </h3>
+                <div class="flex justify-center">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11347.624580788326!2d7.5675939!3d44.6806958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa181c99118f7b325!2sCinema%20Teatro!5e0!3m2!1sen!2sit!4v1663408762974!5m2!1sen!2sit"
+                    width="256"
+                    height="256"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- footer -->
+        <footer
+          class="footer p-10 bg-gray-700 text-neutral-content font-['Cormorant']"
+        >
+          <div>
+            <a>
+              <img
+                src="../../img/logo/logo_svg.svg"
+                alt="logo"
+                class="w-36 h-36"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            </a>
+            <p class="text-lg opacity-50">
+              Vej e Giovo 'd Buriasch<br />"Il Teatro è l'arte più viva perchè è
+              la poesia della Vita"
+            </p>
+          </div>
+          <div>
+            <span class="footer-title text-xl">Social</span>
+            <div class="grid grid-flow-col gap-4">
+              <a>
+                <img
+                  src="../../img/social/facebook_blue.svg"
+                  alt="facebook logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+              <a>
+                <img
+                  src="../../img/social/Instagram_color.svg"
+                  alt="instagram logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+              <a>
+                <img
+                  src="../../img/social/youtube_red.svg"
+                  alt="youtube logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+              <a>
+                <img
+                  src="../../img/social/WhatsApp_green.svg"
+                  alt="whatsapp logo"
+                  class="h-12 w-12 m-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
-      <div>
-        <span class="footer-title text-xl">Social</span>
-        <div class="grid grid-flow-col gap-4">
-          <a>
-            <img
-              src="../../img/social/facebook_blue.svg"
-              alt="facebook logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-          <a>
-            <img
-              src="../../img/social/Instagram_color.svg"
-              alt="instagram logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-          <a>
-            <img
-              src="../../img/social/youtube_red.svg"
-              alt="youtube logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-          <a>
-            <img
-              src="../../img/social/WhatsApp_green.svg"
-              alt="whatsapp logo"
-              class="h-12 w-12 m-2"
-            />
-          </a>
-        </div>
+      <div class="drawer-side">
+        <label for="my-drawer-3" class="drawer-overlay"></label>
+        <ul class="menu p-4 w-80 bg-orange-50">
+          <li>
+            <a href="storia.html" class="focus:bg-gray-600 focus:text-white"
+              >STORIA</a
+            >
+          </li>
+          <li>
+            <a href="spettacoli.html" class="focus:bg-gray-600 focus:text-white"
+              >SPETTACOLI</a
+            >
+          </li>
+          <li>
+            <a
+              href="appuntamenti.html"
+              class="focus:bg-gray-600 focus:text-white"
+              >APPUNTAMENTI</a
+            >
+          </li>
+          <li>
+            <a href="contatti.html" class="focus:bg-gray-600 focus:text-white"
+              >CONTATTI</a
+            >
+          </li>
+        </ul>
       </div>
-    </footer>
+    </div>
   </body>
 </html>
